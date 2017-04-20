@@ -7,7 +7,7 @@ import { fromJS } from 'immutable';
 import Team from '../team.component';
 import TeamsList from '../../teamsList/teamsList.component';
 
-describe('Team Component', function () {
+describe('Team Component', () => {
   const defaultProps = {
     data: fromJS({ crestUrl: 'a', name: 'b', squadMarketValue: 'c' }),
   };
@@ -16,7 +16,7 @@ describe('Team Component', function () {
     <Team {...defaultProps} {...props} />
   );
 
-  it('should render Team root', function () {
+  it('should render Team root', () => {
     const wrapper = shallow(component());
     expect(wrapper.find('.team'))
       .to.have.length(1);

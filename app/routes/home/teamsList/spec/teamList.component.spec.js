@@ -11,7 +11,7 @@ import TeamsList from '../teamsList.component';
 
 
 
-describe('Teams List Component', function () {
+describe('Teams List Component', () => {
   const defaultProps = {
     items: fromJS({ a: 'a', b: 'b', c: 'c' }),
   };
@@ -20,7 +20,7 @@ describe('Teams List Component', function () {
     <TeamsList {...defaultProps} {...props} />
   );
 
-  it('should render Team root', function () {
+  it('should render Team root', () => {
     const wrapper = shallow(component());
     expect(wrapper.find('.teams-list'))
       .to.have.length(1);
